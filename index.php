@@ -15,8 +15,18 @@ require_once('config.php');
 //$search = Usuario::search('u');
 //echo json_encode($search);
 
+//$usuario = new Usuario();
+//$usuario->login('user','12345');
+//echo $usuario;
+
+//$aluno = new Usuario('aluno','@luno');
+//$aluno->insert();
+//echo $aluno;
+
+
 $usuario = new Usuario();
-$usuario->login('user','12345');
+$usuario->loadById(7);
+$usuario->update('professor','senhaprof');
 echo $usuario;
 
 ?>
