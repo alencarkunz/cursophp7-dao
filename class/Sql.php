@@ -1,12 +1,12 @@
 <?php
 	
-class Sql extends PDO {
+class Sql extends PDO { // extends PDO, class nativa do php, a classe vai herdar todas caracteristicas do PDO
 
 	private $conn;
 
 	public function __construct() {
 
-		$this->conn = new PDO('mysql:dbname=cursophp7;host=localhost','root','');
+		$this->conn = new PDO('mysql:host=localhost;dbname=cursophp7','root','');
 
 	}
 

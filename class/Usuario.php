@@ -7,6 +7,13 @@ class Usuario {
 	private $dessenha;
 	private $dtcadastro;
 
+	public function __construct($login = '', $password = '') {
+
+		$this->setDeslogin($login);
+		$this->setDessenha($password);
+
+	}
+	
 	public function getIdusuario() {
 		return $this->idusuario;
 	}
@@ -125,13 +132,6 @@ class Usuario {
 		$this->setDtcadastroa(new DateTime());
 
 	} 
-
-	public function __construct($login = '', $password = '') {
-
-		$this->setDeslogin($login);
-		$this->setDessenha($password);
-
-	}
 
 	public function __toString() {
 
